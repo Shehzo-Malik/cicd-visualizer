@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI/CD Pipeline Visualizer - Shehzal Malik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header>
+            <div class="logo-area">
+                <i class="fa-solid fa-network-wired"></i>
+                <h1>CI/CD Pipeline Visualizer</h1>
+            </div>
+            <p>Developed by Shehzal Malik (DevOps & Software Engineer)</p>
+            <button id="trigger-btn"><i class="fa-solid fa-play"></i> Trigger Pipeline</button>
+        </header>
+
+        <!-- Pipeline Stages Grid -->
+        <div class="stages-grid">
+            <div class="stage-card" id="stage-1">
+                <div class="stage-icon"><i class="fa-solid fa-code-branch"></i></div>
+                <h3>1. Source / Git</h3>
+                <span class="status-badge pending">Pending</span>
+            </div>
+            <div class="stage-card" id="stage-2">
+                <div class="stage-icon"><i class="fa-solid fa-hammer"></i></div>
+                <h3>2. Build & Maven</h3>
+                <span class="status-badge pending">Pending</span>
+            </div>
+            <div class="stage-card" id="stage-3">
+                <div class="stage-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+                <h3>3. Selenium Tests</h3>
+                <span class="status-badge pending">Pending</span>
+            </div>
+            <div class="stage-card" id="stage-4">
+                <div class="stage-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <h3>4. AWS Deploy</h3>
+                <span class="status-badge pending">Pending</span>
+            </div>
+        </div>
+
+        <!-- Live Terminal Logs Section -->
+        <div class="terminal-section">
+            <div class="terminal-header">
+                <span><i class="fa-solid fa-terminal"></i> Live Execution Logs</span>
+                <span id="pipeline-status-text" class="idle">Status: Idle</span>
+            </div>
+            <div class="terminal-body" id="terminal-logs">
+                [INFO] System ready. Click "Trigger Pipeline" to start automated build process...
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
